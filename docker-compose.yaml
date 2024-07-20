@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  backend:
+    build: ./
+    container_name: nestjs_rest
+    environment:
+      - APP_NAME=Marvel
+      - PORT=9000
+      - DEFAULT_CURRENCY=USD
+    ports:
+      - '9000:9000'
+    networks:
+      - nestjs_rest
+
+networks:
+  nestjs_rest:
+    driver: bridge

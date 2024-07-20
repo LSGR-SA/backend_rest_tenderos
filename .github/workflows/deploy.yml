@@ -1,4 +1,4 @@
-name: tenderos_frontend
+name: tenderos_backen_rest
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.CLOUD_RUN_PROJECT_NAME }}
   REGION: us-east1
-  REPO_NAME: tenderos-frontend
+  REPO_NAME: tenderos-backend-rest
 
 jobs:
   build-and-deploy:
